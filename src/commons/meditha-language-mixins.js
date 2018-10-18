@@ -4,7 +4,6 @@ export const VueMedithaLanguagePlugin = {
 			 Vue.mixin({
 				    mounted: function () {
 				      if (this.lang) {
-				    	  console.log("kokokoko");
 				    	  var languageHandler = function(e) {this.lang=e.detail.lang}.bind(this);
 				    	  document.addEventListener('medithaLanguageResponse', languageHandler);
 				    	  this.languageHandler = this.languageHandler 

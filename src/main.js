@@ -18,8 +18,10 @@ import {VueMedithaMetadataPlugin} from './commons/meditha-metadata-mixins.js'
 Vue.use(VueMedithaMetadataPlugin)
 
 
-
-import MedithaTheme from './commons/meditha-theme.vue';
+import MedithaTheme from './commons/meditha-notifier.vue';
+import MedithaNotification from './commons/meditha-notification.vue';
+import MedithaNotifier from './commons/meditha-theme.vue';
+import MedithaWordpressTheme from './commons/meditha-wordpress-theme.vue';
 import MedithaLanguage from './commons/meditha-language.vue';
 import MedithaFakeMetadata from './commons/meditha-fake-metadata.vue';
 import MedithaCommonStyle from './commons/meditha-common-style.vue';
@@ -33,6 +35,7 @@ import MedithaSourceDisplayTab from './template/meditha-source-display-tab.vue';
 import MedithaEducationDisplayTab from './template/meditha-education-display-tab.vue';
 import MedithaManuscriptDisplayTab from './template/meditha-manuscript-display-tab.vue';
 import MedithaKnowledgeDisplayTab from './template/meditha-knowledge-display-tab.vue';
+import MedithaRecordList from './misc/meditha-record-list.vue';
 
 
 ljs.addAliases({
@@ -65,7 +68,10 @@ ljs.load('dep', function() {
 	
 	function register() {
 		console.info("trying to register meditha metadata components")
+		registerElement('meditha-notification', MedithaNotification);
+		registerElement('meditha-notifier', MedithaNotifier);
 		registerElement('meditha-theme', MedithaTheme);
+		registerElement('meditha-wordpress-theme', MedithaWordpressTheme);
 		registerElement('meditha-language', MedithaLanguage);
 		registerElement('meditha-fake-metadata', MedithaFakeMetadata);
 		registerElement('meditha-text-information', MedithaTextInformation);
@@ -79,8 +85,7 @@ ljs.load('dep', function() {
 		registerElement('meditha-education-display-tab', MedithaEducationDisplayTab);
 		registerElement('meditha-manuscript-display-tab', MedithaManuscriptDisplayTab);
 		registerElement('meditha-knowledge-display-tab', MedithaKnowledgeDisplayTab);
-		
-		
+		registerElement('meditha-record-list', MedithaRecordList);
 		stopTimer()
 //		if (window.registredAerisElements.indexOf("aeris-metadata-components-vjs") > -1) {
 //			
