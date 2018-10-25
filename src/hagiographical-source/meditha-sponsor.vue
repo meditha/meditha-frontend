@@ -1,6 +1,5 @@
 <i18n src="../commons/locales.json"></i18n>
-<i18n src="./locales/author-locales.json"></i18n>
-
+<i18n src="./locales/sponsor-locales.json"></i18n>
 <template>
 <div meditha-block-layout data-template="metadata-block">
   <header>
@@ -20,6 +19,7 @@
 </template>
 
 <style>
+@import './../commons/meditha-style.css';
 
 
 </style>

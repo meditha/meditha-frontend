@@ -1,0 +1,17 @@
+{
+  "en": {
+    "other": "Other",
+    "writing": "Writing",
+    "name": "Name",
+    "type": "Type",
+     "specify": "Please, specify"
+     
+  },
+  "fr": {
+    "other": "Autre",
+    "writing": "Rédaction",
+    "name": "Nom",
+    "type": "Type",
+     "specify": "Veuillez préciser"
+  }
+}

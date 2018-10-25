@@ -27,14 +27,16 @@
 	<span class="cartouche" :style="computeManuscriptTabStyle" @click="activeTab='manuscriptTab'">{{$t("manuscriptsAndSchools")}}</span>
 	<span class="cartouche" :style="computeEducationTabStyle" @click="activeTab='educationTab'">{{$t("schoolFormationOfTheSaints")}}</span>
 	<span class="cartouche" :style="knowledgeTabStyle" @click="activeTab='knowledgeTab'">{{$t("hagiographicalKnowledgeAndWriting")}}</span>
+	<meditha-save-button></meditha-save-button>
+	
 </span>
 </div>
 
 
-<meditha-source-display-tab v-show="activeTab == 'sourceTab'"></meditha-source-display-tab>
-<meditha-manuscript-display-tab v-show="activeTab == 'manuscriptTab'"></meditha-manuscript-display-tab>
-<meditha-education-display-tab v-show="activeTab == 'educationTab'"></meditha-education-display-tab>
-<meditha-knowledge-display-tab v-show="activeTab == 'knowledgeTab'"></meditha-knowledge-display-tab>
+<meditha-source-edit-tab v-show="activeTab == 'sourceTab'"></meditha-source-edit-tab>
+<meditha-manuscript-edit-tab v-show="activeTab == 'manuscriptTab'"></meditha-manuscript-edit-tab>
+<meditha-education-edit-tab v-show="activeTab == 'educationTab'"></meditha-education-edit-tab>
+<meditha-knowledge-edit-tab v-show="activeTab == 'knowledgeTab'"></meditha-knowledge-edit-tab>
 
 
 </span>

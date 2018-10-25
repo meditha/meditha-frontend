@@ -1,48 +1,39 @@
-<i18n>
-{
-  "en": {
-    "other": "Other",
-    "sponsor": "Sponsor",
-    "secular": "Secular",
-    "bishop": "Bishop",
-    "abbot": "Abbot",
-    "abbess": "Abbess",
-    "canon": "Canon",
-    "community": "Community",
-    "name": "Name"
-  },
-  "fr": {
-    "other": "Autre",
-    "sponsor": "Commanditaire",
-    "secular": "Laïc",
-    "bishop": "Evêque",
-    "abbot": "Abbé",
-    "abbess": "Abbesse",
-    "canon": "Chanoine",
-    "community": "Communauté",
-    "name": "Nom"
-  }
-}
-</i18n>
+<i18n src="../commons/locales.json"></i18n>
+<i18n src="./locales/sponsor-locales.json"></i18n>
 
 <template>
 <div meditha-block-layout data-template="metadata-block">
   <header>
     <h3><i class="fa fa-user primary-color"></i>{{$t('sponsor')}}</h3>
   </header>
-<main class="meditha-text-information-host">
-	{{$t(sponsorType)}}
-	{{sponsorName}}
+<main class="meditha-text-sponsor-host">
+<table width="100%" style="border-spacing: 0px;">
+ <col width="25%">
+ <col width="75%">
+<tr><td><h5 class="primary-color">{{$t('type')}}:</h5></td><td> <select class="meditha-select" v-model="sponsorType">
+<option value="secular">{{$t('secular')}}</option>
+<option value="bishop">{{$t('bishop')}}</option>
+<option value="abbot">{{$t('abbot')}}</option>
+<option value="abbess">{{$t('abbess')}}</option>
+<option value="canon">{{$t('canon')}}</option>
+<option value="community">{{$t('community')}}</option>
+<option value="other">{{$t('other')}}</option>
+</select> </td></tr>
+<tr v-show="sponsorType=='other'"><td  style="vertical-align: top;"><h5 class="primary-color">{{$t('specify')}}:</h5></td><td><input  style="margin-top: 4px;" class="meditha-input" v-model="otherSponsorType"  ></input></td></tr>
+<tr><td><h5 class="primary-color">{{$t('name')}}:</h5></td><td><input class="meditha-input" v-model="sponsorName" ></input></td></tr>
+<tr><td><h5 class="primary-color">{{$t('placeOfLife')}}:</h5></td><td> <select class="meditha-select" v-model="sponsorPlaceOfLife">
+<option value="episcopate">{{$t('episcopate')}}</option>
+<option value="abbey">{{$t('abbey')}}</option>
+<option value="reign">{{$t('reign')}}</option>
+</select> </td></tr>
+</table>
 </main>
 </div>
 
 </template>
 
 <style>
-
-.meditha-full-width {
-	width: 100%
-}
+@import './../commons/meditha-style.css';
 
 .sublabel.noleftborder {
 	padding-left: 0px;
@@ -56,25 +47,6 @@
 	border-left : 1px solid #ccc;
 }
 
-.meditha-input {
-	width: 100%;
-	line-height: 1.7;
-	color: #666;
-	border: 1px solid #ccc;
-	padding: 3px;
-	font-size: 1rem;
-	font-family: arial;
-}
-
-.meditha-select {
-	padding: 3px 3px 3px 0px;
-	width: 100%;
-	line-height: 1.7;
-	color: #666;
-	border: 1px solid #ccc;
-	font-size: 1rem;
-	font-family: arial;
-}
 
 .meditha-text-information-host ul {
     list-style: none;
@@ -145,15 +117,54 @@ export default {
   
   computed: {
   
-    sponsorType: function() {
-    	if (this.metadata && this.metadata.source && this.metadata.source.sponsor) {
-			return this.metadata.source.sponsor.type;
-		}
-		else {
-			return null;
-		} 
+    sponsorType: { 
+    
+ 	   get: function () {
+			if (this.metadata && this.metadata.source && this.metadata.source.sponsor) {
+				return this.metadata.source.sponsor.type;
+			}
+			else {
+				return null;
+			}
+		},
+		
+		set: function(value) {
+			if (!this.metadata.source.sponsor) {
+				this.metadata.source.sponsor = {}
+			}
+			this.metadata.source.sponsor.type=value;
+			if (this.metadata.source.sponsor.type !='other') {
+					this.metadata.source.sponsor.otherSponsorType=null;
+				}
+		}     
+		
     },
     
+    otherSponsorType: { 
+    
+ 	   get: function () {
+			if (this.metadata && this.metadata.source && this.metadata.source.sponsor) {
+				return this.metadata.source.otherSponsorType;
+			}
+			else {
+				return null;
+			}
+		},
+		
+		set: function(value) {
+		if (!this.metadata.source.sponsor) {
+				this.metadata.source.sponsor = {}
+			}
+				if (this.metadata.source.sponsor.type =='other') {
+					this.metadata.source.sponsor.otherSponsorType=value;
+				}
+				else {
+					this.metadata.source.sponsor.otherSponsorType=null
+				}
+		}     
+		
+    },
+  
     sponsorName: { 
     
  	   get: function () {
@@ -166,10 +177,36 @@ export default {
 		},
 		
 		set: function(value) {
+			if (!this.metadata.source.sponsor) {
+				this.metadata.source.sponsor = {}
+			}
 			this.metadata.source.sponsor.name=value;
 		}     
 		
     },
+    
+    
+    sponsorPlaceOfLife: { 
+    
+ 	   get: function () {
+			if (this.metadata && this.metadata.source && this.metadata.source.sponsor) {
+				return this.metadata.source.sponsor.placeOfLife;
+			}
+			else {
+				return null;
+			}
+		},
+		
+		set: function(value) {
+			if (!this.metadata.source.sponsor) {
+				this.metadata.source.sponsor = {}
+			}
+			this.metadata.source.sponsor.placeOfLife=value;
+		}     
+		
+    },
+    
+    
   },
 
   methods: {

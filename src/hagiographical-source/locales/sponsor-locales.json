@@ -1,0 +1,43 @@
+{
+  "en": {
+    "sponsor": "Sponsor",
+    "secular": "Secular",
+    "bishop": "Bishop",
+    "abbot": "Abbot",
+    "abbess": "Abbess",
+    "canon": "Canon",
+    "community": "Community",
+     "placeOfLife": "Place of life",
+     "episcopate": "Episcopate",
+     "abbey": "TBTranslated - Abbatiat",
+     "reign": "Reign",
+     "other": "Other",
+    "observation": "Observation",
+    "yes": "Yes",
+    "no": "No",
+    "type": "Type",
+    "specify": "Please, specify",
+    "name": "Name"
+     
+  },
+  "fr": {
+    "sponsor": "Commanditaire",
+    "secular": "Laïc",
+    "bishop": "Evêque",
+    "abbot": "Abbé",
+    "abbess": "Abbesse",
+    "canon": "Chanoine",
+    "community": "Communauté",
+     "placeOfLife": "Lieu de vie",
+     "episcopate": "Episcopat",
+     "abbey": "Abbatiat",
+     "reign": "Règne",
+     "other": "Autre",
+    "observation": "Observation",
+    "yes": "Oui",
+    "no": "Non",
+    "type": "Type",
+    "specify": "Veuillez préciser",
+    "name": "Nom"
+  }
+}

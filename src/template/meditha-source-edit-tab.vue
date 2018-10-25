@@ -1,16 +1,17 @@
 <template>
-<span class="meditha-source-display-host">
+<span class="meditha-source-edit-host">
 
 <div class="row2">
 		<div class="column2" style="margin-right:5px">
-			<meditha-sponsor  class="block"></meditha-sponsor>
-			<br />
-			<meditha-bhl-identification></meditha-bhl-identification>
+			<meditha-bhl-identification-edit></meditha-bhl-identification-edit>
 		</div>
 		<div class="column2" style="margin-left:5px">
 			<meditha-sponsor-edit  class="block"></meditha-sponsor-edit>
 			<br />
-			<meditha-bhl-identification-edit></meditha-bhl-identification-edit>
+			<meditha-author-edit  class="block"></meditha-author-edit>
+			<br />
+			<meditha-writing-edit  class="block"></meditha-writing-edit>
+			
 		</div>
 	</div>
 
@@ -74,7 +75,7 @@
     flex: 50%;
 }
 
-.meditha-source-display-host .block {
+.meditha-source-edit-host .block {
 	margin-bottom: 5px 
  }
  

@@ -1,65 +1,5 @@
-<i18n>
-{
-  "en": {
-    "bhlIdentifier": "BHL Identifier",
-    "bhl": "BHL",
-    "formTitle": "Text",
-    "clavisReference": "Clavis reference",
-    "clavisReferenceCote": "TBTranslated - clavisReferenceCote",
-    "bhlNature": "Nature",
-    "latinTitle": "Latin title",
-    "other": "Other",
-    "observation": "Observation",
-    "completeness": "Completeness",
-    "completeText": "Complete text",
-    "incompleteText": "Incomplete text",
-    "unfinishedText": "Unfinished text",
-     "paratext": "Paratext",
-    "yes": "Yes",
-    "no": "No",
-    "lost": "Lost",
-    "likely": "Likely",
-    "type": "Type",
-    "prologue": "TBTranslated - Préface ou prologue",
-    "dedication": "TBTranslated - Lettre d'envoi et dédicace",
-    "conclusion": "TBTranslated - Conclusion avec adresse",
-    "audience": "Audience",
-    "undifferentiatedChristians": "TBTranslated - Peuple chretien indifférencié",
-    "monasticCommunity": "Monastic community",
-    "localCommunity": "Local community",
-    "disciple": "BTranslated - Disciples et proches du saint"
-  },
-  "fr": {
-  	"bhlIdentifier": "Identifiant BHL",
-    "bhl": "BHL",
-    "formTitle": "Texte",
-    "clavisReference": "Référence Clavis",
-    "clavisReferenceCote": "Cote référence Clavis",
-    "bhlNature": "Nature",
-    "latinTitle": "Titre en latin",
-    "other": "Autre",
-    "observation": "Observation",
-     "completeness": "Complétude",
-    "completeText": "Texte complet",
-    "incompleteText": "Texte incomplet",
-    "unfinishedText": "Texte inachevé",
-    "paratext": "Paratexte",
-    "yes": "Oui",
-    "no": "Non",
-    "lost": "Perdu",
-    "likely": "Probable",
-    "type": "Type",
-    "prologue": "Préface ou prologue",
-    "dedication": "Lettre d'envoi et dédicace",
-    "conclusion": "Conclusion avec adresse",
-    "audience": "Public",
-    "undifferentiatedChristians": "Peuple chretien indifférencié",
-    "monasticCommunity": "Communauté monastique",
-    "localCommunity": "Communauté locale",
-    "disciple": "Disciples et proches du saint"
-  }
-}
-</i18n>
+<i18n src="../commons/locales.json"></i18n>
+<i18n src="./locales/bhl-identification-locales.json"></i18n>
 
 <template>
 <div meditha-block-layout data-template="metadata-block">
@@ -74,7 +14,7 @@
 <tr><td><h5 class="primary-color">{{$t('clavisReference')}}:</h5></td><td> {{clavisReference}}  </td></tr>
 <tr><td><h5 class="primary-color">{{$t('clavisReferenceCote')}}:</h5></td><td>{{clavisReferenceCote}}</td></tr>
 <tr><td><h5 class="primary-color">{{$t('latinTitle')}}:</h5></td><td>{{latinTitle}}</td></tr>
-<tr><td><h5 class="primary-color">{{$t('bhlNature')}}:</h5></td>{{bhlNature}}<td></td></tr>
+<tr><td><h5 class="primary-color">{{$t('bhlNature')}}:</h5></td>{{$t(bhlNature)}}<td></td></tr>
 <tr><td><h5 class="primary-color">{{$t('observation')}}:</h5></td>{{bhlNatureObservation}}<td></td></tr>
 <tr><td><h5 class="primary-color">{{$t('completeness')}}:</h5></td>{{$t(completeness)}}<td></td></tr>
 <tr><td><h5 class="primary-color">{{$t('paratext')}}:</h5></td>{{$t(paratext)}}<td></td></tr>
@@ -87,6 +27,7 @@
 </template>
 
 <style>
+@import './../commons/meditha-style.css';
 
 .meditha-text-information-host ul {
     list-style: none;
@@ -290,6 +231,7 @@ export default {
   methods: {
   
    handleTheme: function(event) {
+   console.log("MedithaThemeEvent received")
       this.theme = event.detail;
       this.ensureTheme();
     },

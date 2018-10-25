@@ -181,7 +181,6 @@ export default {
 			this.deselectAll();
 			var cartContent = e.detail.cartContent
 			if (cartContent) {
-				console.log(cartContent)
 				for (var i =0; i <cartContent.length; i++) {
 					var cartItem = cartContent[i]
 					if (cartItem.collectionId== this.uuid) {

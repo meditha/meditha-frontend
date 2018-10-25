@@ -66,7 +66,6 @@ export default {
      	 
      	 };
   	    var event = new CustomEvent('medithaMetadataResponse', { detail: {metadata: metadata}});
-  		console.log("TOTOTO")
   		document.dispatchEvent(event);
   		
   },

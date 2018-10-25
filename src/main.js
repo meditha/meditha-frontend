@@ -18,25 +18,31 @@ import {VueMedithaMetadataPlugin} from './commons/meditha-metadata-mixins.js'
 Vue.use(VueMedithaMetadataPlugin)
 
 
-import MedithaTheme from './commons/meditha-notifier.vue';
+import MedithaButton from './commons/buttons/meditha-button.vue';
+import MedithaSaveButton from './commons/buttons/meditha-save-button.vue';
+import MedithaNotifier from './commons/meditha-notifier.vue';
 import MedithaNotification from './commons/meditha-notification.vue';
-import MedithaNotifier from './commons/meditha-theme.vue';
+import MedithaTheme from './commons/meditha-theme.vue';
 import MedithaWordpressTheme from './commons/meditha-wordpress-theme.vue';
 import MedithaLanguage from './commons/meditha-language.vue';
 import MedithaFakeMetadata from './commons/meditha-fake-metadata.vue';
+import MedithaMetadataLoader from './commons/meditha-metadata-loader.vue';
 import MedithaCommonStyle from './commons/meditha-common-style.vue';
-import MedithaTextInformation from './hagiographical-source/meditha-text-information.vue';
 import MedithaBhlIdentification from './hagiographical-source/meditha-bhl-identification.vue';
 import MedithaBhlIdentificationEdit from './hagiographical-source/meditha-bhl-identification-edit.vue';
+import MedithaAuthorEdit from './hagiographical-source/meditha-author-edit.vue';
 import MedithaSponsorEdit from './hagiographical-source/meditha-sponsor-edit.vue';
+import MedithaWritingEdit from './hagiographical-source/meditha-writing-edit.vue';
+import MedithaSponsor from './hagiographical-source/meditha-sponsor.vue';
 import MedithaAuthor from './hagiographical-source/meditha-author.vue';
-import MedithaDisplayTemplate from './template/meditha-display-template.vue';
 import MedithaSourceDisplayTab from './template/meditha-source-display-tab.vue';
+import MedithaSourceEditTab from './template/meditha-source-edit-tab.vue';
 import MedithaEducationDisplayTab from './template/meditha-education-display-tab.vue';
 import MedithaManuscriptDisplayTab from './template/meditha-manuscript-display-tab.vue';
 import MedithaKnowledgeDisplayTab from './template/meditha-knowledge-display-tab.vue';
 import MedithaRecordList from './misc/meditha-record-list.vue';
-
+import MedithaDisplayTemplate from './template/meditha-display-template.vue';
+import MedithaEditTemplate from './template/meditha-edit-template.vue';
 
 ljs.addAliases({
 	dep: ['https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
@@ -68,23 +74,30 @@ ljs.load('dep', function() {
 	
 	function register() {
 		console.info("trying to register meditha metadata components")
+		registerElement('meditha-button', MedithaButton);
+		registerElement('meditha-save-button', MedithaSaveButton);
 		registerElement('meditha-notification', MedithaNotification);
 		registerElement('meditha-notifier', MedithaNotifier);
 		registerElement('meditha-theme', MedithaTheme);
 		registerElement('meditha-wordpress-theme', MedithaWordpressTheme);
 		registerElement('meditha-language', MedithaLanguage);
 		registerElement('meditha-fake-metadata', MedithaFakeMetadata);
-		registerElement('meditha-text-information', MedithaTextInformation);
+		registerElement('meditha-metadata-loader', MedithaMetadataLoader)
 		registerElement('meditha-common-style', MedithaCommonStyle);
 		registerElement('meditha-bhl-identification', MedithaBhlIdentification);
 		registerElement('meditha-bhl-identification-edit', MedithaBhlIdentificationEdit);
 		registerElement('meditha-sponsor-edit', MedithaSponsorEdit);
+		registerElement('meditha-author-edit', MedithaAuthorEdit);
+		registerElement('meditha-writing-edit', MedithaWritingEdit);
+		registerElement('meditha-sponsor', MedithaSponsor);
 		registerElement('meditha-author', MedithaAuthor);
-		registerElement('meditha-display-template', MedithaDisplayTemplate);
 		registerElement('meditha-source-display-tab', MedithaSourceDisplayTab);
+		registerElement('meditha-source-edit-tab', MedithaSourceEditTab);
 		registerElement('meditha-education-display-tab', MedithaEducationDisplayTab);
 		registerElement('meditha-manuscript-display-tab', MedithaManuscriptDisplayTab);
 		registerElement('meditha-knowledge-display-tab', MedithaKnowledgeDisplayTab);
+		registerElement('meditha-display-template', MedithaDisplayTemplate);
+		registerElement('meditha-edit-template', MedithaEditTemplate);
 		registerElement('meditha-record-list', MedithaRecordList);
 		stopTimer()
 //		if (window.registredAerisElements.indexOf("aeris-metadata-components-vjs") > -1) {

@@ -11,6 +11,12 @@ export default {
       type: String,
       default: null
     },
+    
+    primarytext:  {
+      type: String,
+      default: null
+    },
+    
     emphasis:  {
       type: String,
       default: null
@@ -26,6 +32,9 @@ export default {
     primary () {
 	      this.refresh();
     },
+    primarytext () {
+	      this.refresh();
+    },
     emphasis () {
 	      this.refresh();
     },
@@ -35,9 +44,9 @@ export default {
   },
   
   created: function () {
-  		this.refresh()
   		this.medithaThemeRequestListener = this.handleThemeRequest.bind(this) 
-   document.addEventListener('medithaThemeRequest', this.medithaThemeRequestListener);
+	    document.addEventListener('medithaThemeRequest', this.medithaThemeRequestListener);
+  		
   },
   
    destroyed: function() {
@@ -50,7 +59,7 @@ export default {
   },
   
   mounted: function() {
-   
+ 	 this.refresh()
   },
   
   data () {
@@ -62,8 +71,10 @@ export default {
   methods: {
   
   refresh: function() {
+  
   	if (this.active && this.primary && this.emphasis) {
-  	    var event = new CustomEvent('medithaTheme', { detail: {primary: this.primary, emphasis: this.emphasis}});
+  	    console.log("MedithaThemeEvent launched")
+  	    var event = new CustomEvent('medithaTheme', { detail: {primary: this.primary, emphasis: this.emphasis, primarytext: this.primarytext}});
   		document.dispatchEvent(event);
   	}
   },

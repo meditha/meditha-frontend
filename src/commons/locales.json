@@ -1,0 +1,20 @@
+{
+  "en": {
+    "other": "Other",
+    "observation": "Observation",
+    "yes": "Yes",
+    "no": "No",
+    "type": "Type",
+    "specify": "Please, specify",
+    "name": "Name"
+  },
+  "fr": {
+    "other": "Autre",
+    "observation": "Observation",
+    "yes": "Oui",
+    "no": "Non",
+    "type": "Type",
+    "specify": "Veuillez préciser",
+    "name": "Nom"
+  }
+}

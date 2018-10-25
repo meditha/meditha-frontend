@@ -1,0 +1,82 @@
+.meditha-full-width {
+	width: 100%
+}
+
+.meditha-input {
+	width: 100%;
+	line-height: 1.7;
+	color: #666;
+	border: 1px solid #ccc;
+	padding: 3px;
+	font-size: 1rem;
+	font-family: arial;
+}
+
+.meditha-select {
+	padding: 3px 3px 3px 0px;
+	width: 100%;
+	line-height: 1.7;
+	color: #666;
+	border: 1px solid #ccc;
+	font-size: 1rem;
+	font-family: arial;
+}
+
+.meditha-button {
+    padding: 4px 6px 6px;
+    border-radius: 5px;
+    font-weight: normal;
+    
+    font-variant: small-caps;
+    font-size: 18px;
+    background: #dcdcdc;
+    cursor: pointer
+}
+
+.meditha-opacity-layer {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    position: fixed;
+    opacity:0.5;
+    background: white;
+}
+
+.meditha-modal-container {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 20px;
+    overflow: hidden;
+    position: fixed;
+}
+
+
+.meditha-modal-header {
+    padding: 2px 10px;
+    background: white;
+}
+
+/* Modal Body */
+.meditha-modal-body {padding: 2px 16px;}
+
+/* Modal Footer */
+.meditha-modal-footer {
+    padding: 10px 16px;
+    display: flex; 
+    justify-content: flex-end;
+    background: white;
+}
+
+/* Modal Content */
+.meditha-modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}

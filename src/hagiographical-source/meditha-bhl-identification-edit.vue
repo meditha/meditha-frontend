@@ -1,69 +1,4 @@
-<i18n>
-{
-  "en": {
-    "bhlIdentifier": "BHL Identifier",
-    "bhl": "BHL",
-    "formTitle": "Text",
-    "clavisReference": "Clavis reference",
-    "clavisReferenceCote": "TBTranslated - clavisReferenceCote",
-    "bhlNature": "Nature",
-    "latinTitle": "Latin title",
-    "other": "Other",
-    "observation": "Observation",
-    "completeness": "Completeness",
-    "completeText": "Complete text",
-    "incompleteText": "Incomplete text",
-    "unfinishedText": "Unfinished text",
-    "paratext": "Paratext",
-    "yes": "Yes",
-    "no": "No",
-    "lost": "Lost",
-    "likely": "Likely",
-    "type": "Type",
-    "prologue": "TBTranslated - Préface ou prologue",
-    "dedication": "TBTranslated - Lettre d'envoi et dédicace",
-    "conclusion": "TBTranslated - Conclusion avec adresse",
-    "specify": "Please, specify",
-    "presence": "Presence",
-    "audience": "Audience",
-    "undifferentiatedChristians": "TBTranslated - Peuple chretien indifférencié",
-    "monasticCommunity": "Monastic community",
-    "localCommunity": "Local community",
-    "disciple": "BTranslated - Disciples et proches du saint"
-  },
-  "fr": {
-  	"bhlIdentifier": "Identifiant BHL",
-    "bhl": "BHL",
-    "formTitle": "Texte",
-    "clavisReference": "Référence Clavis",
-    "clavisReferenceCote": "Cote référence Clavis",
-    "bhlNature": "Nature",
-    "latinTitle": "Titre en latin",
-    "other": "Autre",
-    "observation": "Observation",
-    "completeness": "Complétude",
-    "completeText": "Texte complet",
-    "incompleteText": "Texte incomplet",
-    "unfinishedText": "Texte inachevé",
-    "paratext": "Paratexte",
-    "yes": "Oui",
-    "no": "Non",
-    "lost": "Perdu",
-    "likely": "Probable",
-    "type": "Type",
-    "prologue": "Préface ou prologue",
-    "dedication": "Lettre d'envoi et dédicace",
-    "conclusion": "Conclusion avec adresse",
-    "specify": "Veuillez préciser",
-    "presence": "Présence",
-    "audience": "Public",
-    "undifferentiatedChristians": "Peuple chretien indifférencié",
-    "monasticCommunity": "Communauté monastique",
-    "localCommunity": "Communauté locale",
-    "disciple": "Disciples et proches du saint"
-  }
-}
-</i18n>
+<i18n src="./locales/bhl-identification-locales.json"></i18n>
 
 <template>
 <div meditha-block-layout data-template="metadata-block">
@@ -74,7 +9,7 @@
 <table width="100%" style="border-spacing: 0px;">
  <col width="25%">
  <col width="75%">
-<tr><td><h5 class="primary-color ">{{$t('bhlIdentifier')}}:</h5></td><td> {{bhlIdentifier}}</td></tr>
+<tr><td><h5 class="primary-color">{{$t('bhlIdentifier')}}:</h5></td><td> {{bhlIdentifier}}</td></tr>
 <tr><td><h5 class="primary-color">{{$t('clavisReference')}}:</h5></td><td> <select class="meditha-select" v-model="clavisReference"><option>Gallia</option><option>Italia</option></select> </td></tr>
 <tr><td><h5 class="primary-color">{{$t('clavisReferenceCote')}}:</h5></td><td><input class="meditha-input" v-model="clavisReferenceCote" ></input></td></tr>
 <tr><td><h5 class="primary-color">{{$t('latinTitle')}}:</h5></td><td><input class="meditha-input" v-model="latinTitle" ></input></td></tr>
@@ -100,10 +35,7 @@
 </template>
 
 <style>
-
-.meditha-full-width {
-	width: 100%
-}
+@import './../commons/meditha-style.css';
 
 .sublabel.noleftborder {
 	padding-left: 0px;
@@ -117,25 +49,6 @@
 	border-left : 1px solid #ccc;
 }
 
-.meditha-input {
-	width: 100%;
-	line-height: 1.7;
-	color: #666;
-	border: 1px solid #ccc;
-	padding: 3px;
-	font-size: 1rem;
-	font-family: arial;
-}
-
-.meditha-select {
-	padding: 3px 3px 3px 0px;
-	width: 100%;
-	line-height: 1.7;
-	color: #666;
-	border: 1px solid #ccc;
-	font-size: 1rem;
-	font-family: arial;
-}
 
 .meditha-text-information-host ul {
     list-style: none;
@@ -462,7 +375,7 @@ export default {
     },
 
     ensureTheme: function() {
-    
+    console.log("ensuretheme")
     if (this.$el && this.theme) {
     	 this.$el.querySelectorAll(".primary-color").forEach(el => el.style.color = this.theme.primary);
     	 this.$el.querySelectorAll(".sublabel").forEach(el => el.style.borderLeftColor = this.theme.primary);
