@@ -4,23 +4,46 @@
 <template>
 <div meditha-block-layout data-template="metadata-block">
   <header>
-    <h3><i class="fa fa-circle-thin primary-color"></i>{{$t('publication')}}</h3>
+    <h3><i class="fa fa-circle-thin primary-color"></i>{{$t('referenceManuscriptForPublishing')}}</h3>
   </header>
 <main class="meditha-text-sponsor-host">
+
+<table v-show="edit" width="100%" style="border-spacing: 0px;">
+<tr>
+<td align="left">
+<span class="clickable" @click="openDatabaseModal" style="text-decoration: underline;">{{$t('chooseFromCoteDatabase')}}</span>
+</td>
+<td align="right">
+<span class="clickable" @click="reset()" v-show="hasReferenceManuscript" style="text-decoration: underline;">{{$t('reset')}}</span>
+</td>
+</tr>
+</table>
+    
 <table width="100%" style="border-spacing: 0px;">
- <col width="25%">
- <col width="75%">
-<tr><td><h5 class="primary-color">{{$t('scientificEditorName')}}:</h5></td><td>{{scientificEditorName}}</input></td>
-<tr><td><h5 class="primary-color">{{$t('reference')}}:</h5></td><td>{{reference}}</input></td>
-<tr><td><h5 class="primary-color">{{$t('yearOfPublication')}}:</h5></td><td>{{yearOfPublication}}</input></td>
-<tr><td><h5 class="primary-color">{{$t('pagination')}}:</h5></td><td>{{pagination}}</input></td>
-<tr><td><h5 class="primary-color">{{$t('otherPublications')}}:</h5></td><td>{{otherPublications}}</input></td>
- </tr>
+ <col width="35%">
+ <col width="65%">
+
+<tr><td><h5 class="primary-color">{{$t('cote')}}:</h5></td><td>
+  {{cote}}</input>
+ </td></tr>
  
- 
+ <tr><td><h5 class="primary-color">{{$t('role')}}:</h5></td><td>
+  {{role}}</input>
+ </td></tr> 
+
+ <tr><td><h5 class="primary-color">{{$t('link')}}:</h5></td><td>
+  {{link}} <i class="fa fa-link clickable" v-show="link" @click="openUrl(link)" :title="$t('clickToOpen')"></i></input>
+ </td></tr>
+
+ <tr><td><h5 class="primary-color">{{$t('bibliography')}}:</h5></td><td>
+  {{bibliography}}</input>
+ </td></tr>
 
 </table>
 </main>
+
+<meditha-pager collection="referencemanuscript" :modaltitle="$t('referenceManuscriptsForPublishing')" :tablelabels="$t('cote')" tablecolumns="cote"/>
+
 </div>
 
 </template>
@@ -36,6 +59,12 @@
 <script>
 export default {
   props: {
+  
+  	edit: {
+      type: Boolean,
+      default: false
+    },
+  
 
   },
 
@@ -51,6 +80,7 @@ export default {
       visible: true,
       lang: 'en',
       metadataListener:true,
+      medithaPagerSelectListener:true,
       metadata: null
     }
   },
@@ -64,11 +94,15 @@ export default {
   destroyed: function() {
     document.removeEventListener('medithaTheme', this.medithaThemeListener);
     this.medithaThemeListener = null;
+     document.removeEventListener('medithaPagerSelectEvent', this.medithaPagerSelectListener);
+    this.medithaPagerSelectListener = null;
   },
 
   created: function() {
     this.medithaThemeListener = this.handleTheme.bind(this);
     document.addEventListener('medithaTheme', this.medithaThemeListener);
+     this.medithaPagerSelectListener = this.handlePagerSelect.bind(this);
+    document.addEventListener('medithaPagerSelectEvent', this.medithaPagerSelectListener);
   },
 
   updated: function() {
@@ -77,82 +111,93 @@ export default {
   
   computed: {
   
-    scientificEditorName: { 
     
- 	   get: function () {
-			if (this.metadata && this.metadata.source && this.metadata.source.manuscript && this.metadata.source.manuscript.scientificEditorName) {
-				
-				return "Ed. "+this.metadata.source.manuscript.scientificEditorName;
-			}
-			else {
-				return null;
-			}
-		} 
-		
-    },
-    
-    reference: { 
-    
- 	   get: function () {
-			if (this.metadata && this.metadata.source && this.metadata.source.manuscript && this.metadata.source.manuscript.reference) {
-				
-				return this.metadata.source.manuscript.reference;
-			}
-			else {
-				return null;
-			}
-		} 
-		
-    },
-    
-    yearOfPublication: { 
-    
- 	   get: function () {
-			if (this.metadata && this.metadata.source && this.metadata.source.manuscript && this.metadata.source.manuscript.yearOfPublication) {
-				
-				return this.metadata.source.manuscript.yearOfPublication;
-			}
-			else {
-				return null;
-			}
-		} 
-		
-    },
-    
-    pagination: { 
-    
- 	   get: function () {
-			if (this.metadata && this.metadata.source && this.metadata.source.manuscript && this.metadata.source.manuscript.pagination) {
-				
-				return this.metadata.source.manuscript.pagination;
-			}
-			else {
-				return null;
-			}
-		} 
-		
-    },
-    
-     otherPublications: { 
-    
- 	   get: function () {
-			if (this.metadata && this.metadata.source && this.metadata.source.manuscript && this.metadata.source.manuscript.otherPublications) {
-				
-				return this.metadata.source.manuscript.otherPublications;
-			}
-			else {
-				return null;
-			}
-		} 
-		
-    }
+     hasReferenceManuscript: function() {
+     if ((this.metadata) && (this.metadata.source)) {
+     	return this.metadata.source.referencemanuscript != null
+     }
+     return false;
+     },
+     
+     creationDate: function() {
+     if ((this.metadata) && (this.metadata.source) && (this.metadata.source.referencemanuscript)) {
+     	return this.metadata.source.referencemanuscript.creationDate
+     }
+     else {
+     	return "";
+     }
+     },
+     
+     role: function() {
+     if ((this.metadata) && (this.metadata.source) && (this.metadata.source.referencemanuscript)) {
+     	var role = this.metadata.source.referencemanuscript.role
+     	if (role == 'other') {
+     		if (this.metadata.source.referencemanuscript.otherRole) {
+     			return this.metadata.source.referencemanuscript.otherRole
+     		}
+     	}
+     	return role
+     }
+     else {
+     	return "";
+     }
+     },
+     
+     cote: function() {
+     if ((this.metadata) && (this.metadata.source) && (this.metadata.source.referencemanuscript)) {
+     	return this.metadata.source.referencemanuscript.cote
+     }
+     else {
+     	return "";
+     }
+     },
+     
+     bibliography: function() {
+     if ((this.metadata) && (this.metadata.source) && (this.metadata.source.referencemanuscript)) {
+     	return this.metadata.source.referencemanuscript.bibliography
+     }
+     else {
+     	return "";
+     }
+     },
+     
+     link: function() {
+     if ((this.metadata) && (this.metadata.source) && (this.metadata.source.referencemanuscript)) {
+     	return this.metadata.source.referencemanuscript.link
+     }
+     else {
+     	return "";
+     }
+     }
+     
+     		
+     
+     
+  
     
     
   },
 
   methods: {
   
-   handleTheme: function(event) {
+  reset: function() {
+  	this.metadata.source.referencemanuscript = null
+  },
+  
+  handlePagerSelect: function(e) {
+  	if (e.detail.collection =="referencemanuscript") {
+  		this.metadata.source.referencemanuscript = e.detail.item
+  	}
+  },
+  
+  openDatabaseModal: function() {
+  
+   var event = new CustomEvent('medithaPagerShowEvent', { detail: {collection: 'referencemanuscript'}});
+   
+    document.dispatchEvent(event);
+  },
+  
+    handleTheme: function(event) {
       this.theme = event.detail;
       this.ensureTheme();
     },
@@ -163,7 +208,9 @@ export default {
     	 this.$el.querySelectorAll(".primary-color").forEach(el => el.style.color = this.theme.primary);
     	}
     
-    }
+    },
+  
+    
   }
 }
 </script>

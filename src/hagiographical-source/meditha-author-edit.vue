@@ -20,7 +20,7 @@
 <span class="clickable" @click="openDatabaseModal()" style="text-decoration: underline;">{{$t('chooseFromAuthorDatabase')}}</span>
 </td>
 <tr v-show="isKnown">
-<td  style="vertical-align: top;"><h5 class="primary-color">{{$t('name')}}:</h5></td><td>{{authorName}} <i class="fa fa-link clickable" v-show="authorUrl" @click="openUrl(authorUrl)"></i></td>
+<td  style="vertical-align: top;"><h5 class="primary-color">{{$t('name')}}:</h5></td><td>{{authorName}} <i class="fa fa-link clickable" v-show="authorUrl" @click="openUrl(authorUrl)" :title="$t('clickToOpen')"></i></td>
 </tr>
 <tr v-show="isKnown">
 <td  style="vertical-align: top;"><h5 class="primary-color">{{$t('gender')}}:</h5></td><td>{{$t(authorGender)}}</td>
@@ -476,10 +476,6 @@ export default {
     
     },
     
-    openUrl(url) {
-	    window.open(url, '_blank');	
-    },
-
     ensureTheme: function() {
     
     if (this.$el && this.theme) {

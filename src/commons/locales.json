@@ -6,7 +6,10 @@
     "no": "No",
     "type": "Type",
     "specify": "Please, specify",
-    "name": "Name"
+    "name": "Name",
+    "select": "Select",
+    "loading": "Loading...",
+    "cancel": "Cancel"
   },
   "fr": {
     "other": "Autre",
@@ -15,6 +18,9 @@
     "no": "Non",
     "type": "Type",
     "specify": "Veuillez préciser",
-    "name": "Nom"
+    "name": "Nom",
+    "select": "Sélectionner",
+    "loading": "Chargement...",
+    "cancel": "Annuler"
   }
 }

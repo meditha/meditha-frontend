@@ -46,7 +46,8 @@
 	"familyNetworkMember": "Member of the same family network",
 	"friendshipConnection": "Friendship connection",
 	"schoolCommunityMember": "Member of the same school community",
-	"schoolMasterOrAssimilated": "TBTranslated - Ecolâtre ou assimilé"
+	"schoolMasterOrAssimilated": "TBTranslated - Ecolâtre ou assimilé",
+	"clickToOpen": "Click to open the link"
 	
   },
   "fr": {
@@ -96,7 +97,8 @@
 	"familyNetworkMember": "Membre du même réseau familial",
 	"friendshipConnection": "Relations d'amité",
 	"schoolCommunityMember": "Membre de la même communauté scolaire",
-	"schoolMasterOrAssimilated": "Ecolâtre ou assimilé"
+	"schoolMasterOrAssimilated": "Ecolâtre ou assimilé",
+	 "clickToOpen": "Cliquez pour ouvrir le lien"
 	
   }
 }

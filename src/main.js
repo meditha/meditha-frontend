@@ -17,12 +17,17 @@ Vue.use(VueMedithaLanguagePlugin)
 import {VueMedithaMetadataPlugin} from './commons/meditha-metadata-mixins.js'
 Vue.use(VueMedithaMetadataPlugin)
 
+import {VueMedithaCommonFunctionPlugin} from './commons/meditha-common-function-mixins.js'
+Vue.use(VueMedithaCommonFunctionPlugin)
+
+
 
 import MedithaButton from './commons/buttons/meditha-button.vue';
 import MedithaSaveButton from './commons/buttons/meditha-save-button.vue';
 import MedithaNotifier from './commons/meditha-notifier.vue';
 import MedithaNotification from './commons/meditha-notification.vue';
 import MedithaTheme from './commons/meditha-theme.vue';
+import MedithaPager from './commons/meditha-pager.vue';
 import MedithaWordpressTheme from './commons/meditha-wordpress-theme.vue';
 import MedithaLanguage from './commons/meditha-language.vue';
 import MedithaFakeMetadata from './commons/meditha-fake-metadata.vue';
@@ -34,12 +39,12 @@ import MedithaAuthorEdit from './hagiographical-source/meditha-author-edit.vue';
 import MedithaSponsorEdit from './hagiographical-source/meditha-sponsor-edit.vue';
 import MedithaWritingEdit from './hagiographical-source/meditha-writing-edit.vue';
 import MedithaDatingEdit from './hagiographical-source/meditha-dating-edit.vue';
-import MedithaReferenceManuscriptEdit from './hagiographical-source/meditha-referencemanuscript-edit.vue';
 import MedithaReferenceManuscript from './hagiographical-source/meditha-referencemanuscript.vue';
 import MedithaPublicationEdit from './hagiographical-source/meditha-publication-edit.vue';
 import MedithaPublication from './hagiographical-source/meditha-publication.vue';
 import MedithaDating from './hagiographical-source/meditha-dating.vue';
 import MedithaSponsor from './hagiographical-source/meditha-sponsor.vue';
+import MedithaSaint from './hagiographical-source/meditha-saint.vue';
 import MedithaAuthor from './hagiographical-source/meditha-author.vue';
 import MedithaSourceDisplayTab from './template/meditha-source-display-tab.vue';
 import MedithaSourceEditTab from './template/meditha-source-edit-tab.vue';
@@ -85,6 +90,7 @@ ljs.load('dep', function() {
 		registerElement('meditha-notification', MedithaNotification);
 		registerElement('meditha-notifier', MedithaNotifier);
 		registerElement('meditha-theme', MedithaTheme);
+		registerElement('meditha-pager', MedithaPager);
 		registerElement('meditha-wordpress-theme', MedithaWordpressTheme);
 		registerElement('meditha-language', MedithaLanguage);
 		registerElement('meditha-fake-metadata', MedithaFakeMetadata);
@@ -96,10 +102,10 @@ ljs.load('dep', function() {
 		registerElement('meditha-author-edit', MedithaAuthorEdit);
 		registerElement('meditha-writing-edit', MedithaWritingEdit);
 		registerElement('meditha-dating-edit', MedithaDatingEdit);
-		registerElement('meditha-referencemanuscript-edit', MedithaReferenceManuscriptEdit);
 		registerElement('meditha-referencemanuscript', MedithaReferenceManuscript);
 		registerElement('meditha-publication-edit', MedithaPublicationEdit);
 		registerElement('meditha-publication', MedithaPublication);
+		registerElement('meditha-saint', MedithaSaint);
 		registerElement('meditha-sponsor', MedithaSponsor);
 		registerElement('meditha-author', MedithaAuthor);
 		registerElement('meditha-dating', MedithaDating);

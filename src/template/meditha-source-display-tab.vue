@@ -3,11 +3,11 @@
 
 <div class="row2">
 		<div class="column2" style="margin-right:5px">
+			<meditha-saint class="block"></meditha-saint>
+			<br />
 			<meditha-publication  class="block"></meditha-publication>
 			<br />
-			<!-- 
-			<meditha-manuscript  class="block"></meditha-manuscript>
-			-->
+			<meditha-referencemanuscript class="block"></meditha-referencemanuscript>
 			<br />
 			<meditha-dating  class="block"></meditha-dating>
 			<br />

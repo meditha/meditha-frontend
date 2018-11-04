@@ -1,0 +1,12 @@
+{  "en": {
+	"saint": "Saint(s)",
+	"addFromDatabase": "Add from database",
+	"name": "Name"
+	
+  },
+  "fr": {
+  "saint": "Saint(s)",
+   "addFromCoteDatabase": "Ajouter à partir de la base de données",
+   "name": "Nom"
+  }
+}

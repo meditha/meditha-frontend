@@ -8,7 +8,7 @@
   </header>
 <main class="meditha-text-sponsor-host">
 
-<table width="100%" style="border-spacing: 0px;">
+<table v-show="edit" width="100%" style="border-spacing: 0px;">
 <tr>
 <td align="left">
 <span class="clickable" @click="openDatabaseModal()" style="text-decoration: underline;">{{$t('chooseFromCoteDatabase')}}</span>
@@ -20,16 +20,24 @@
 </table>
     
 <table width="100%" style="border-spacing: 0px;">
- <col width="25%">
- <col width="75%">
+ <col width="35%">
+ <col width="65%">
 
 <tr><td><h5 class="primary-color">{{$t('cote')}}:</h5></td><td>
-  {{cote}</input>
+  {{cote}}</input>
  </td></tr>
  
- <tr><td><h5 class="primary-color">{{$t('creationDate')}}:</h5></td><td>
-  {{creationDate}</input>
+ <tr><td><h5 class="primary-color">{{$t('role')}}:</h5></td><td>
+  {{role}}</input>
  </td></tr> 
+
+ <tr><td><h5 class="primary-color">{{$t('link')}}:</h5></td><td>
+  {{link}} <i class="fa fa-link clickable" v-show="link" @click="openUrl(link)" :title="$t('clickToOpen')"></i></input>
+ </td></tr>
+
+ <tr><td><h5 class="primary-color">{{$t('bibliography')}}:</h5></td><td>
+  {{bibliography}}</input>
+ </td></tr>
 
 </table>
 </main>
@@ -88,6 +96,12 @@
 <script>
 export default {
   props: {
+  
+  	edit: {
+      type: Boolean,
+      default: false
+    },
+  
 
   },
 
@@ -170,7 +184,62 @@ export default {
      	return this.metadata.source.referencemanuscript != null
      }
      return false;
+     },
+     
+     creationDate: function() {
+     if ((this.metadata) && (this.metadata.source) && (this.metadata.source.referencemanuscript)) {
+     	return this.metadata.source.referencemanuscript.creationDate
      }
+     else {
+     	return "";
+     }
+     },
+     
+     role: function() {
+     if ((this.metadata) && (this.metadata.source) && (this.metadata.source.referencemanuscript)) {
+     	var role = this.metadata.source.referencemanuscript.role
+     	if (role == 'other') {
+     		if (this.metadata.source.referencemanuscript.otherRole) {
+     			return this.metadata.source.referencemanuscript.otherRole
+     		}
+     	}
+     	return role
+     }
+     else {
+     	return "";
+     }
+     },
+     
+     cote: function() {
+     if ((this.metadata) && (this.metadata.source) && (this.metadata.source.referencemanuscript)) {
+     	return this.metadata.source.referencemanuscript.cote
+     }
+     else {
+     	return "";
+     }
+     },
+     
+     bibliography: function() {
+     if ((this.metadata) && (this.metadata.source) && (this.metadata.source.referencemanuscript)) {
+     	return this.metadata.source.referencemanuscript.bibliography
+     }
+     else {
+     	return "";
+     }
+     },
+     
+     link: function() {
+     if ((this.metadata) && (this.metadata.source) && (this.metadata.source.referencemanuscript)) {
+     	return this.metadata.source.referencemanuscript.link
+     }
+     else {
+     	return "";
+     }
+     }
+     
+     		
+     
+     
   
     
     
@@ -250,7 +319,7 @@ export default {
   		console.log(response);
   		});
     
-    },
+    }
     
     
   }

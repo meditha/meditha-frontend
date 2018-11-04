@@ -1,22 +1,26 @@
 {  "en": {
 	"referenceManuscriptForPublishing": "Reference manuscript for publishing",
-	"loading": "Loading...",
-	"cancel": "Cancel",
 	"referenceManuscriptsForPublishing": "Reference manuscripts for publishing",
 	"chooseFromCoteDatabase": "Choose from database",
-	"select": "Select",
 	"cote": "TBTranslated - Cote",
-	"reset": "Reset"
+	"reset": "Reset",
+	"role": "Role in the handwritten tradition",
+	"link": "Online scanning link",
+	"bibliography": "Bibliography",
+	"creationDate": "Creation date",
+	"clickToOpen": "Click to open the link"
 	
   },
   "fr": {
   "referenceManuscriptForPublishing": "Manuscrit de référence pour l'édition",
-  "loading": "Chargement...",
-  "cancel": "Annuler",
   "referenceManuscriptsForPublishing": "Manuscrits de référence pour l'édition",
   "chooseFromCoteDatabase": "Sélectionner à partir de la base de données",
-  "select": "Sélectionner",
   "cote": "Cote",
-  "reset": "Réinitialiser"
+  "reset": "Réinitialiser",
+  "role": "Rôle dans la tradition manuscrite",
+  "link": "Lien de la numérisation en ligne",
+  "bibliography": "Bibliographie",
+  "creationDate": "Date de création",
+  "clickToOpen": "Cliquez pour ouvrir le lien"
   }
 }
