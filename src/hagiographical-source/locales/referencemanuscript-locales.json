@@ -1,0 +1,22 @@
+{  "en": {
+	"referenceManuscriptForPublishing": "Reference manuscript for publishing",
+	"loading": "Loading...",
+	"cancel": "Cancel",
+	"referenceManuscriptsForPublishing": "Reference manuscripts for publishing",
+	"chooseFromCoteDatabase": "Choose from database",
+	"select": "Select",
+	"cote": "TBTranslated - Cote",
+	"reset": "Reset"
+	
+  },
+  "fr": {
+  "referenceManuscriptForPublishing": "Manuscrit de référence pour l'édition",
+  "loading": "Chargement...",
+  "cancel": "Annuler",
+  "referenceManuscriptsForPublishing": "Manuscrits de référence pour l'édition",
+  "chooseFromCoteDatabase": "Sélectionner à partir de la base de données",
+  "select": "Sélectionner",
+  "cote": "Cote",
+  "reset": "Réinitialiser"
+  }
+}

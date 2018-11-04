@@ -4,7 +4,7 @@ export const VueMedithaMetadataPlugin = {
 			 Vue.mixin({
 				    mounted: function () {
 				      if (this.metadataListener) {
-				    	  var metadataHandler = function(e) {this.metadata=e.detail.metadata}.bind(this);
+				    	  var metadataHandler = function(e) {this.metadata=e.detail.metadata; if (this.postMetadataLoad) {this.postMetadataLoad()}}.bind(this);
 				    	  document.addEventListener('medithaMetadataResponse', metadataHandler);
 				    	  this.metadataHandler = this.metadataHandler 
 				    	  var event = new CustomEvent('medithaMetadataRequest', {});

@@ -141,20 +141,15 @@ export default {
 <style>
 
 .meditha-display-template-host .cartouche {
-    /*display: inline-block;
-    margin-bottom: 5px;*/
     padding: 4px 5px 6px;
     border-radius: 5px;
     font-weight: normal;
-    /*color: #fafafa;*/
-    
     font-variant: small-caps;
     font-size: 18px;
 }
 
 .meditha-display-template-host {
 	display: block;
-	font-size: 14px;
 	height: 70vh;
 	/*overflow: scroll;*/
 }

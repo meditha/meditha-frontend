@@ -1,0 +1,20 @@
+{
+  "en": {
+  	"dates": "Dates",
+  	"datingCriteria": "Dating criteria",
+  	"manuscripts": "Manuscripts",
+  	"author": "Author",
+  	"language": "Language",
+  	"other": "Other",
+  	"specify": "Please, specify"
+  },
+  "fr": {
+   "dates": "Dates",
+   "datingCriteria": "Critères de datation",
+   "manuscripts": "Manuscrits",
+  	"author": "Auteur",
+  	"language": "Langue",
+  	"other": "Autre",
+  	"specify": "Veuillez préciser"
+  }
+}

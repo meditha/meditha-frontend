@@ -3,9 +3,15 @@
 
 <div class="row2">
 		<div class="column2" style="margin-right:5px">
+			<meditha-publication-edit  class="block"></meditha-publication-edit>
+			<br />
+			<meditha-referencemanuscript-edit  class="block"></meditha-referencemanuscript-edit>
+			<br />
 			<meditha-bhl-identification-edit></meditha-bhl-identification-edit>
 		</div>
 		<div class="column2" style="margin-left:5px">
+			<meditha-dating-edit  class="block"></meditha-dating-edit>
+			<br />
 			<meditha-sponsor-edit  class="block"></meditha-sponsor-edit>
 			<br />
 			<meditha-author-edit  class="block"></meditha-author-edit>

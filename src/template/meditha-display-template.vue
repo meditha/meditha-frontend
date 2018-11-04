@@ -152,7 +152,6 @@ export default {
 
 .meditha-display-template-host {
 	display: block;
-	font-size: 14px;
 	height: 70vh;
 	/*overflow: scroll;*/
 }

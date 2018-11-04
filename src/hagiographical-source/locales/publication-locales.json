@@ -1,0 +1,30 @@
+{  "en": {
+	"publication": "Publication",
+    "manuscript": "Manuscript",
+    "scientificEditorName": "Scientific editor's name",
+    "reference": "Reference",
+    "placeOfPublication": "Place of publication",
+    "yearOfPublication" : "Year of publication",
+    "pagination": "Pagination",
+    "otherPublications": "Other publications",
+    "referencePublication": "Reference publication",
+    "specify": "Please, specify",
+    "others": "Others",
+    "complement": "Complement"
+	
+  },
+  "fr": {
+  "publication": "Edition",
+   "manuscript": "Manuscrit",
+   "scientificEditorName": "Nom scientifique de l'éditeur",
+   "reference": "Réference",
+   "placeOfPublication": "Lieu d'édition'",
+   "yearOfPublication" : "Année d'édition'",
+   "pagination": "Pagination",
+   "otherPublications": "Autres publications",
+   "referencePublication": "Edition de référence",
+   "specify": "Veuillez préciser",
+   "others": "Autres",
+   "complement": "Complément"
+  }
+}

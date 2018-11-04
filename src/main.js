@@ -33,6 +33,12 @@ import MedithaBhlIdentificationEdit from './hagiographical-source/meditha-bhl-id
 import MedithaAuthorEdit from './hagiographical-source/meditha-author-edit.vue';
 import MedithaSponsorEdit from './hagiographical-source/meditha-sponsor-edit.vue';
 import MedithaWritingEdit from './hagiographical-source/meditha-writing-edit.vue';
+import MedithaDatingEdit from './hagiographical-source/meditha-dating-edit.vue';
+import MedithaReferenceManuscriptEdit from './hagiographical-source/meditha-referencemanuscript-edit.vue';
+import MedithaReferenceManuscript from './hagiographical-source/meditha-referencemanuscript.vue';
+import MedithaPublicationEdit from './hagiographical-source/meditha-publication-edit.vue';
+import MedithaPublication from './hagiographical-source/meditha-publication.vue';
+import MedithaDating from './hagiographical-source/meditha-dating.vue';
 import MedithaSponsor from './hagiographical-source/meditha-sponsor.vue';
 import MedithaAuthor from './hagiographical-source/meditha-author.vue';
 import MedithaSourceDisplayTab from './template/meditha-source-display-tab.vue';
@@ -89,8 +95,14 @@ ljs.load('dep', function() {
 		registerElement('meditha-sponsor-edit', MedithaSponsorEdit);
 		registerElement('meditha-author-edit', MedithaAuthorEdit);
 		registerElement('meditha-writing-edit', MedithaWritingEdit);
+		registerElement('meditha-dating-edit', MedithaDatingEdit);
+		registerElement('meditha-referencemanuscript-edit', MedithaReferenceManuscriptEdit);
+		registerElement('meditha-referencemanuscript', MedithaReferenceManuscript);
+		registerElement('meditha-publication-edit', MedithaPublicationEdit);
+		registerElement('meditha-publication', MedithaPublication);
 		registerElement('meditha-sponsor', MedithaSponsor);
 		registerElement('meditha-author', MedithaAuthor);
+		registerElement('meditha-dating', MedithaDating);
 		registerElement('meditha-source-display-tab', MedithaSourceDisplayTab);
 		registerElement('meditha-source-edit-tab', MedithaSourceEditTab);
 		registerElement('meditha-education-display-tab', MedithaEducationDisplayTab);

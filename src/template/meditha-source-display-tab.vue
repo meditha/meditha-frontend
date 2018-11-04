@@ -3,7 +3,17 @@
 
 <div class="row2">
 		<div class="column2" style="margin-right:5px">
+			<meditha-publication  class="block"></meditha-publication>
+			<br />
+			<!-- 
+			<meditha-manuscript  class="block"></meditha-manuscript>
+			-->
+			<br />
+			<meditha-dating  class="block"></meditha-dating>
+			<br />
 			<meditha-sponsor  class="block"></meditha-sponsor>
+			<br />
+			<meditha-author  class="block"></meditha-author>
 			<br />
 			<meditha-bhl-identification></meditha-bhl-identification>
 		</div>

@@ -37,18 +37,6 @@
 <style>
 @import './../commons/meditha-style.css';
 
-.sublabel.noleftborder {
-	padding-left: 0px;
-}
-
-.sublabel h5{
-	padding-left: 10px;
-}
-
-.sublabel {
-	border-left : 1px solid #ccc;
-}
-
 
 .meditha-text-information-host ul {
     list-style: none;

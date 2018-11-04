@@ -33,6 +33,10 @@
     cursor: pointer
 }
 
+.clickable {
+	cursor: pointer
+}
+
 .meditha-opacity-layer {
     height: 100%;
     width: 100%;
@@ -79,4 +83,16 @@
     width: 50%;
     background: white;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.sublabel.noleftborder {
+	padding-left: 0px;
+}
+
+.sublabel h5{
+	padding-left: 10px;
+}
+
+.sublabel {
+	border-left : 1px solid #ccc;
 }

@@ -136,6 +136,56 @@ export default {
   	if (!metadata.source.author.type) {
   		metadata.source.author.type=''
   	}
+
+	if (!metadata.source.author.name) {
+  		metadata.source.author.name=''
+  	}
+  	
+  	if (!metadata.source.author.gender) {
+  		metadata.source.author.gender=''
+  	}
+  	
+  	if (!metadata.source.author.url) {
+  		metadata.source.author.url=''
+  	}
+  	
+  	if (!metadata.source.author.status) {
+  		metadata.source.author.status=[]
+  	}
+  	
+  	if (!metadata.source.author.sponsorConnexions) {
+  		metadata.source.author.sponsorConnexions=[]
+  	}
+  	
+  	if (!metadata.source.author.recipientConnexions) {
+  		metadata.source.author.recipientConnexions=[]
+  	}
+  	
+  	
+  	if (!metadata.source.dates) {
+  		metadata.source.dates={}
+  	}
+  	
+  	if (!metadata.source.dates.datingCriteria) {
+  		metadata.source.dates.datingCriteria=[]
+  	}
+  	
+  	if (!metadata.source.publication) {
+  		metadata.source.publication={}
+  	}
+  	
+  	if (!metadata.source.publication.referencePublication) {
+  		metadata.source.publication.referencePublication=''
+  	}
+  	
+  	if (!metadata.source.publication.referencePublicationCompl) {
+  		metadata.source.publication.referencePublicationCompl=''
+  	}
+  	
+  	if (!metadata.source.referencemanuscript) {
+  		metadata.source.referencemanuscript=null
+  	}
+  	
   	
   	return metadata
   },
