@@ -12,13 +12,15 @@
 			<meditha-bhl-identification-edit></meditha-bhl-identification-edit>
 		</div>
 		<div class="column2" style="margin-left:5px">
-			<meditha-dating-edit  class="block"></meditha-dating-edit>
+			<meditha-bhl-identification-edit></meditha-bhl-identification-edit>
 			<br />
 			<meditha-sponsor-edit  class="block"></meditha-sponsor-edit>
 			<br />
 			<meditha-author-edit  class="block"></meditha-author-edit>
 			<br />
 			<meditha-writing-edit  class="block"></meditha-writing-edit>
+			<br />
+			<meditha-dating-edit  class="block"></meditha-dating-edit>
 			
 		</div>
 	</div>

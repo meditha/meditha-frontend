@@ -103,7 +103,8 @@ export default {
     return {
     	theme: null,
     	medithaThemeListener: null,
-    	activeTab:"sourceTab",
+    	//activeTab:"sourceTab",
+    	activeTab:"manuscriptTab",
     	 metadataListener:true,
       	metadata: null,
     	lang:'en'

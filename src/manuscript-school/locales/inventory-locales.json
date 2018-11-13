@@ -1,0 +1,29 @@
+{  "en": {
+	"generalInventory": "General inventory of text manuscripts",
+	"numberKnownManuscripts":"Number of known manuscripts",
+	"presentOnBHLms": "Which are present on BHLms",
+	"notesOnHandwrittenTradition": "Notes on the handwritten tradition",
+	"notesOnHandwrittenTraditionHelp": "Catalogs seen, bibliography, lost manuscripts, etc.",
+	"legendier": "TBTranslated - Légendier",
+	"legendierPerCirculumAnni": "TBTranslated - Légendier per circulum anni",
+	"passionnaire": "TBTranslated - Passionaire",
+	"libellus": "Libellus",
+	"anthology": "Anthology",
+	"others": "Others",
+	"typeDistribution": "Type distribution" 
+  },
+  "fr": {
+ 	"generalInventory": "Inventaire général des manuscrits du texte",
+ 	"numberKnownManuscripts":"Nombre de manuscrits connus",
+ 	"presentOnBHLms": "Dont présents sur BHLms",
+ 	"notesOnHandwrittenTradition": "Notes sur la tradition manuscrite",
+ 	"notesOnHandwrittenTraditionHelp": "Catalogues vus, bibliographie, manuscrits perdus, etc.",
+ 	"legendier": "Légendier",
+	"legendierPerCirculumAnni": "Légendier per circulum anni",
+	"passionnaire": "Passionaire",
+	"libellus": "Libellus",
+	"anthology": "Anthology",
+	"others": "Autres",
+	"typeDistribution": "Répartition par type" 
+  }
+}

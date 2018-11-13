@@ -186,6 +186,52 @@ export default {
   		metadata.source.referencemanuscript=null
   	}
   	
+  	if (!metadata.source.saint) {
+  		metadata.source.saint=[]
+  	}
+  	
+  	if (!metadata.manuscripts) {
+  		metadata.manuscripts={}
+  	}
+  	
+  	if (!metadata.manuscripts.typeDistribution) {
+  		metadata.manuscripts.typeDistribution={}
+  	}
+  	
+  	if (!metadata.manuscripts.typeDistribution.legendier) {
+  		metadata.manuscripts.typeDistribution.legendier=''
+  	}
+  	
+  	if (!metadata.manuscripts.typeDistribution.legendierPerCirculumAnni) {
+  		metadata.manuscripts.typeDistribution.legendierPerCirculumAnni=''
+  	}
+  	
+  	if (!metadata.manuscripts.typeDistribution.passionnaire) {
+  		metadata.manuscripts.typeDistribution.passionnaire=''
+  	}
+  	
+  	if (!metadata.manuscripts.typeDistribution.libellus) {
+  		metadata.manuscripts.typeDistribution.libellus=''
+  	}
+  	
+  	if (!metadata.manuscripts.typeDistribution.anthology) {
+  		metadata.manuscripts.typeDistribution.anthology=''
+  	}
+
+	if (!metadata.manuscripts.typeDistribution.others) {
+  		metadata.manuscripts.typeDistribution.others=''
+  	} 
+  	
+  	if (!metadata.manuscripts.typeDistribution.others) {
+  		metadata.manuscripts.typeDistribution.others=''
+  	}
+  	
+  	if (!metadata.manuscripts.numberKnownManuscripts) {
+  		metadata.manuscripts.numberKnownManuscripts=''
+  	}  	
+  	
+  	
+  	
   	
   	return metadata
   },

@@ -9,7 +9,18 @@
     "name": "Name",
     "select": "Select",
     "loading": "Loading...",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "backToList": "Back to list",
+    "save": "Save",
+    "saving": "Saving...",
+    "savingSuccessful": "Saving successful",
+    "deleting": "Deleting...",
+    "deletionCompleted": "Deletion completed",
+    "delete": "Delete",
+    "refreshing": "Refreshing...",
+    "add": "Add",
+    "saveAndSelect": "Save and select"
   },
   "fr": {
     "other": "Autre",
@@ -21,6 +32,17 @@
     "name": "Nom",
     "select": "Sélectionner",
     "loading": "Chargement...",
-    "cancel": "Annuler"
+    "cancel": "Annuler",
+    "edit": "Editer",
+    "backToList": "Retour à la liste",
+    "save": "Sauver",
+    "saving": "Sauvegarde...",
+    "savingSuccessful": "Sauvegarde réussie",
+    "deleting": "Suppression...",
+    "deletionCompleted": "Suppression réussie",
+    "delete": "Suppression",
+    "refreshing": "Rafraichissement...",
+    "add": "Ajouter",
+    "saveAndSelect": "Sauvegarder et sélectionner"
   }
 }

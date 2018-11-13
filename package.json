@@ -1,7 +1,7 @@
 {
   "name": "meditha-metadata-components-vjs",
   "description": "Meditha metadata components. ",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Francois ANDRE",
   "private": false,
   "scripts": {

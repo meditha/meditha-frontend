@@ -40,14 +40,23 @@ import MedithaSponsorEdit from './hagiographical-source/meditha-sponsor-edit.vue
 import MedithaWritingEdit from './hagiographical-source/meditha-writing-edit.vue';
 import MedithaDatingEdit from './hagiographical-source/meditha-dating-edit.vue';
 import MedithaReferenceManuscript from './hagiographical-source/meditha-referencemanuscript.vue';
+import MedithaReferenceManuscriptEdit from './hagiographical-source/meditha-referencemanuscript-edit.vue';
 import MedithaPublicationEdit from './hagiographical-source/meditha-publication-edit.vue';
 import MedithaPublication from './hagiographical-source/meditha-publication.vue';
 import MedithaDating from './hagiographical-source/meditha-dating.vue';
 import MedithaSponsor from './hagiographical-source/meditha-sponsor.vue';
 import MedithaSaint from './hagiographical-source/meditha-saint.vue';
+import MedithaSaintEdit from './hagiographical-source/meditha-saint-edit.vue';
 import MedithaAuthor from './hagiographical-source/meditha-author.vue';
+
+
+import MedithaGeneralInventoryEdit from './manuscript-school/meditha-general-inventory-edit.vue';
+import MedithaGeneralInventory from './manuscript-school/meditha-general-inventory.vue';
+
+
 import MedithaSourceDisplayTab from './template/meditha-source-display-tab.vue';
 import MedithaSourceEditTab from './template/meditha-source-edit-tab.vue';
+import MedithaManuscriptEditTab from './template/meditha-manuscript-edit-tab.vue';
 import MedithaEducationDisplayTab from './template/meditha-education-display-tab.vue';
 import MedithaManuscriptDisplayTab from './template/meditha-manuscript-display-tab.vue';
 import MedithaKnowledgeDisplayTab from './template/meditha-knowledge-display-tab.vue';
@@ -103,14 +112,22 @@ ljs.load('dep', function() {
 		registerElement('meditha-writing-edit', MedithaWritingEdit);
 		registerElement('meditha-dating-edit', MedithaDatingEdit);
 		registerElement('meditha-referencemanuscript', MedithaReferenceManuscript);
+		registerElement('meditha-referencemanuscript-edit', MedithaReferenceManuscriptEdit);
 		registerElement('meditha-publication-edit', MedithaPublicationEdit);
 		registerElement('meditha-publication', MedithaPublication);
 		registerElement('meditha-saint', MedithaSaint);
+		registerElement('meditha-saint-edit', MedithaSaintEdit);
 		registerElement('meditha-sponsor', MedithaSponsor);
 		registerElement('meditha-author', MedithaAuthor);
 		registerElement('meditha-dating', MedithaDating);
+		
+		registerElement('meditha-general-inventory-edit', MedithaGeneralInventoryEdit);
+		registerElement('meditha-general-inventory', MedithaGeneralInventory);
+		
+		
 		registerElement('meditha-source-display-tab', MedithaSourceDisplayTab);
 		registerElement('meditha-source-edit-tab', MedithaSourceEditTab);
+		registerElement('meditha-manuscript-edit-tab', MedithaManuscriptEditTab);
 		registerElement('meditha-education-display-tab', MedithaEducationDisplayTab);
 		registerElement('meditha-manuscript-display-tab', MedithaManuscriptDisplayTab);
 		registerElement('meditha-knowledge-display-tab', MedithaKnowledgeDisplayTab);

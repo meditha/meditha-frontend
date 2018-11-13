@@ -1,39 +1,25 @@
 <template>
-<span class="meditha-source-display-host">
+<span class="meditha-manuscript-edit-host">
 
 <div class="row2">
 		<div class="column2" style="margin-right:5px">
-			<meditha-saint class="block"></meditha-saint>
-			<br />
-			<meditha-publication  class="block"></meditha-publication>
-			<br />
-			<meditha-referencemanuscript class="block"></meditha-referencemanuscript>
+			<meditha-general-inventory-edit  class="block"></meditha-general-inventory-edit>
 			<br />
 		</div>
 		<div class="column2" style="margin-left:5px">
-			<meditha-bhl-identification class="block"></meditha-bhl-identification>
-			<br />
-			<meditha-sponsor  class="block"></meditha-sponsor>
-			<br />
-			<meditha-author  class="block"></meditha-author>
-			<br />
-			<meditha-writing  class="block"></meditha-writing>
-			<br />
-			<meditha-dating  class="block"></meditha-dating>
+			
+			
 		</div>
 	</div>
 
 
 </span>
+
 </template>
 
 <script>
 	export default {
 	props: {
-	  	lang:  {
-	      type: String,
-	      default: 'en'
-	    }
 	},
   
    mounted: function() {
@@ -83,7 +69,7 @@
     flex: 50%;
 }
 
-.meditha-source-display-host .block {
+.meditha-manuscript-edit-host .block {
 	margin-bottom: 5px 
  }
  

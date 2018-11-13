@@ -8,7 +8,12 @@
 	"link": "Online scanning link",
 	"bibliography": "Bibliography",
 	"creationDate": "Creation date",
-	"clickToOpen": "Click to open the link"
+	"clickToOpen": "Click to open the link",
+	"authorManuscript":"Author mauscript",
+	"singleManuscript":"Single manuscript",
+	"libellus":"Libellus",
+	"other":"Other"	,
+	"specify": "Please, specify"
 	
   },
   "fr": {
@@ -21,6 +26,11 @@
   "link": "Lien de la numérisation en ligne",
   "bibliography": "Bibliographie",
   "creationDate": "Date de création",
-  "clickToOpen": "Cliquez pour ouvrir le lien"
+  "clickToOpen": "Cliquez pour ouvrir le lien",
+  "authorManuscript":"Manuscrit d'auteur",
+	"singleManuscript":"Manuscrit unique",
+	"libellus":"Libellus",
+	"other":"Autre",
+	"specify": "Veuillez préciser"
   }
 }

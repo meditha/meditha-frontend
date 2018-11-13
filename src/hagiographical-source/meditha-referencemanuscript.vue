@@ -24,25 +24,25 @@
  <col width="65%">
 
 <tr><td><h5 class="primary-color">{{$t('cote')}}:</h5></td><td>
-  {{cote}}</input>
+  {{cote}}
  </td></tr>
  
  <tr><td><h5 class="primary-color">{{$t('role')}}:</h5></td><td>
-  {{role}}</input>
+  {{role}}
  </td></tr> 
 
  <tr><td><h5 class="primary-color">{{$t('link')}}:</h5></td><td>
-  {{link}} <i class="fa fa-link clickable" v-show="link" @click="openUrl(link)" :title="$t('clickToOpen')"></i></input>
+  {{link}} <i class="fa fa-link clickable" v-show="link" @click="openUrl(link)" :title="$t('clickToOpen')"></i>
  </td></tr>
 
  <tr><td><h5 class="primary-color">{{$t('bibliography')}}:</h5></td><td>
-  {{bibliography}}</input>
+  {{bibliography}}
  </td></tr>
 
 </table>
 </main>
 
-<meditha-pager collection="referencemanuscript" :modaltitle="$t('referenceManuscriptsForPublishing')" :tablelabels="$t('cote')" tablecolumns="cote"/>
+<meditha-pager collection="referencemanuscript" :modaltitle="$t('referenceManuscriptsForPublishing')" :tablelabels="$t('cote')" tablecolumns="cote" editable="true" :edittitle="$t('referenceManuscriptForPublishing')" editcomponent="meditha-referencemanuscript-edit"/>
 
 </div>
 
