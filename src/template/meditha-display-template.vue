@@ -30,11 +30,12 @@
 </span>
 </div>
 
-
+<div class="template-container">
 <meditha-source-display-tab v-show="activeTab == 'sourceTab'"></meditha-source-display-tab>
 <meditha-manuscript-display-tab v-show="activeTab == 'manuscriptTab'"></meditha-manuscript-display-tab>
 <meditha-education-display-tab v-show="activeTab == 'educationTab'"></meditha-education-display-tab>
 <meditha-knowledge-display-tab v-show="activeTab == 'knowledgeTab'"></meditha-knowledge-display-tab>
+</div>
 
 
 </span>
@@ -212,6 +213,11 @@ export default {
 
 .meditha-display-template-host .metadata-container .column {
 	width: 50%;
+}
+
+.template-container {
+	overflow:auto;
+	padding:3px;
 }
 
  </style>

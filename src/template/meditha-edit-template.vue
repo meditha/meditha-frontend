@@ -32,13 +32,13 @@
 </span>
 </div>
 
-
+<div class="template-container">
 <meditha-source-edit-tab v-show="activeTab == 'sourceTab'"></meditha-source-edit-tab>
 <meditha-manuscript-edit-tab v-show="activeTab == 'manuscriptTab'"></meditha-manuscript-edit-tab>
 <meditha-education-edit-tab v-show="activeTab == 'educationTab'"></meditha-education-edit-tab>
 <meditha-knowledge-edit-tab v-show="activeTab == 'knowledgeTab'"></meditha-knowledge-edit-tab>
 
-
+</div>
 </span>
 </template>
 
@@ -103,8 +103,8 @@ export default {
     return {
     	theme: null,
     	medithaThemeListener: null,
-    	//activeTab:"sourceTab",
-    	activeTab:"manuscriptTab",
+    	activeTab:"sourceTab",
+    	//activeTab:"manuscriptTab",
     	 metadataListener:true,
       	metadata: null,
     	lang:'en'
@@ -211,6 +211,11 @@ export default {
 
 .meditha-display-template-host .metadata-container .column {
 	width: 50%;
+}
+
+.template-container {
+	overflow:auto;
+	padding:3px;
 }
 
  </style>
