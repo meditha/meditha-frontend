@@ -8,8 +8,6 @@
 			<meditha-publication-edit  class="block"></meditha-publication-edit>
 			<br />
 			<meditha-referencemanuscript edit="true" class="block"></meditha-referencemanuscript>
-			<br />
-			<meditha-bhl-identification-edit></meditha-bhl-identification-edit>
 		</div>
 		<div class="column2" style="margin-left:5px">
 			<meditha-bhl-identification-edit></meditha-bhl-identification-edit>
